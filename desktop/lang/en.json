@@ -1,0 +1,9 @@
+{
+  "title": "SGS Compressor",
+  "subtitle": "Modern archive tool",
+  "compress": "Compress",
+  "extract": "Extract",
+  "compress_title": "Compress file or folder",
+  "extract_title": "Extract archive",
+  "split": "Split mode"
+}

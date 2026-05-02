@@ -1,24 +1,31 @@
-const { execFile } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 
-function compress(path, split = false) {
-  execFile("python3", [
-    "engine/sgs_compressor.py",
-    "c",
-    path,
-    "",
-    "",
-    split ? "--split" : ""
-  ], (err, stdout) => {
-    alert(stdout);
-  });
+let lang = {};
+
+function detectLanguage() {
+  const systemLang = navigator.language || "en";
+
+  if (systemLang.startsWith("es")) return "es";
+  if (systemLang.startsWith("eu")) return "eu";
+  return "en";
 }
 
-function decompress(path) {
-  execFile("python3", [
-    "engine/sgs_compressor.py",
-    "x",
-    path
-  ], (err, stdout) => {
-    alert(stdout);
-  });
+function loadLang() {
+  const selected = detectLanguage();
+
+  const filePath = path.join(__dirname, "lang", `${selected}.json`);
+  lang = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  applyLang();
 }
+
+function applyLang() {
+  document.getElementById("title").innerText = lang.title;
+  document.getElementById("subtitle").innerText = lang.subtitle;
+
+  document.getElementById("compressTitle").innerText = lang.compress_title;
+  document.getElementById("extractTitle").innerText = lang.extract;
+}
+
+window.addEventListener("DOMContentLoaded", loadLang);

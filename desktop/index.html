@@ -2,38 +2,56 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>SGS Compressor</title>
+  <title>SGS</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
 
-    <header>
-      <h1>SGS Compressor</h1>
-      <p>Modern archive tool</p>
-    </header>
+<div class="bg"></div>
 
-    <div class="card">
-      <h2>📦 Compress</h2>
-      <input id="path" placeholder="File or folder path">
+<div class="container">
+
+  <header>
+    <h1 id="title">SGS Compressor</h1>
+    <p id="subtitle">Modern archive tool</p>
+  </header>
+
+  <div class="grid">
+
+    <div class="card glass">
+      <h2 id="compressTitle">Compress</h2>
+
+      <input id="path" placeholder="File or folder">
 
       <div class="row">
-        <button onclick="compress(document.getElementById('path').value)">Compress</button>
-        <button class="secondary" onclick="compress(document.getElementById('path').value, true)">Split</button>
+        <button onclick="compress(document.getElementById('path').value)">
+          Compress
+        </button>
+
+        <button class="ghost" onclick="compress(document.getElementById('path').value, true)">
+          Split
+        </button>
       </div>
     </div>
 
-    <div class="card">
-      <h2>📂 Extract</h2>
-      <input id="file" placeholder="sgs file">
+    <div class="card glass">
+      <h2 id="extractTitle">Extract</h2>
 
-      <button onclick="decompress(document.getElementById('file').value)">Extract</button>
+      <input id="file" placeholder="Archive file">
+
+      <button onclick="decompress(document.getElementById('file').value)">
+        Extract
+      </button>
     </div>
 
   </div>
 
-  <script src="renderer.js"></script>
-  <script src="theme.js"></script>
+</div>
+
+<script src="renderer.js"></script>
+<script src="theme.js"></script>
+<script src="lang.js"></script>
+
 </body>
 </html>

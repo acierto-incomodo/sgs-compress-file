@@ -4,6 +4,10 @@ sgs-compress-file/
 │   └── sgs_compressor.py
 │
 ├── desktop/
+│   ├── lang/
+│   │   ├── en.json
+│   │   ├── es.json
+│   │   └── eu.json
 │   ├── main.js
 │   ├── renderer.js
 │   ├── index.html

@@ -1,0 +1,9 @@
+{
+  "title": "SGS Compresor",
+  "subtitle": "Herramienta moderna de compresión",
+  "compress": "Comprimir",
+  "extract": "Descomprimir",
+  "compress_title": "Comprimir archivo o carpeta",
+  "extract_title": "Extraer archivo",
+  "split": "Modo dividido"
+}
