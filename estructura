@@ -1,13 +1,13 @@
 sgs-compress-file/
 │
 ├── engine/
-│   └── sgs_compressor.py      # 🔥 MOTOR PYTHON (UNO SOLO)
+│   └── sgs_compressor.py
 │
 ├── desktop/
-│   ├── main.js                # Electron main
-│   ├── renderer.js           # UI logic
-│   ├── index.html            # interfaz
-│   └── style.css             # estilo simple
+│   ├── main.js
+│   ├── renderer.js
+│   ├── index.html
+│   └── style.css
 │
 ├── package.json
-└── make.sh                   # build
+└── make.sh

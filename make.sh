@@ -1,11 +1,13 @@
 #!/bin/bash
 
-echo "Installing dependencies..."
+echo "📦 Installing Node deps..."
 npm install
 
-echo "Building Python engine..."
+echo "🐍 Building Python engine..."
 pip install pyinstaller
 pyinstaller --onefile engine/sgs_compressor.py
 
-echo "Done!"
-echo "Run: npm start"
+echo "🚀 Building Electron app..."
+npm run dist
+
+echo "✅ DONE!"

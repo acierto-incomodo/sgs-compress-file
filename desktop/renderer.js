@@ -1,7 +1,7 @@
 const { execFile } = require("child_process");
 
 function compress(path, split = false) {
-  execFile("python", [
+  execFile("python3", [
     "engine/sgs_compressor.py",
     "c",
     path,
@@ -9,18 +9,16 @@ function compress(path, split = false) {
     "",
     split ? "--split" : ""
   ], (err, stdout) => {
-    console.log(stdout);
     alert(stdout);
   });
 }
 
 function decompress(path) {
-  execFile("python", [
+  execFile("python3", [
     "engine/sgs_compressor.py",
     "x",
     path
   ], (err, stdout) => {
-    console.log(stdout);
     alert(stdout);
   });
 }

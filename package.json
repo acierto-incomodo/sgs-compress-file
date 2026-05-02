@@ -1,0 +1,39 @@
+{
+  "name": "sgs-compress-file",
+  "version": "1.0.0",
+  "description": "SGS Compressor - custom archive tool",
+  "main": "desktop/main.js",
+  "author": "StormGamesStudios <meliodas.aitor@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acierto-incomodo/sgs-compress-file"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "build": {
+    "appId": "com.stormgamesstudios.sgscompress",
+    "productName": "SGS Compressor",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "linux": {
+      "target": "AppImage"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
