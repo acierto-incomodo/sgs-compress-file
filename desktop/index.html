@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SGS Compressor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>SGS Compressor</h1>
+
+<div class="box">
+  <h2>Compress</h2>
+  <input id="path" placeholder="path...">
+  <button onclick="compress(document.getElementById('path').value)">Compress</button>
+  <button onclick="compress(document.getElementById('path').value, true)">Split</button>
+</div>
+
+<div class="box">
+  <h2>Decompress</h2>
+  <input id="file" placeholder="file.sgs...">
+  <button onclick="decompress(document.getElementById('file').value)">Extract</button>
+</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>

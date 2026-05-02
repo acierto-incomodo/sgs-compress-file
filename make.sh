@@ -1,18 +1,11 @@
 #!/bin/bash
 
-echo "🔧 Instalando dependencias..."
-pip install -r requirements.txt
+echo "Installing dependencies..."
+npm install
 
-echo "🧹 Limpiando builds anteriores..."
-rm -rf build dist __pycache__ *.spec
+echo "Building Python engine..."
+pip install pyinstaller
+pyinstaller --onefile engine/sgs_compressor.py
 
-echo "🚀 Compilando..."
-
-pyinstaller \
-  --onefile \
-  --noconsole \
-  --name sgs_compressor \
-  sgs_compressor.py
-
-echo "✅ Build completado!"
-echo "📁 Ejecutable en: dist/sgs_compressor"
+echo "Done!"
+echo "Run: npm start"

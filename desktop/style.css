@@ -1,0 +1,13 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.box {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
